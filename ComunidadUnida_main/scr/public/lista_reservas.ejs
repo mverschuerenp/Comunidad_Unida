@@ -1,0 +1,16 @@
+<div class="list-group">
+  <% for(let i=0; i < reservas.length; i++) { %>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><%= reservas[i].place %></h5>
+        <small></small>
+        <p class="mb-1"><%=reservas[i].name %></p>
+        <small></small>
+        <p class="mb-1"><%=reservas[i].rut %></p>
+        <small></small>
+        <p class="mb-1"><%=reservas[i].rank_of_time %></p>
+
+      </div>
+    </a>
+  <% } %>
+</div>
