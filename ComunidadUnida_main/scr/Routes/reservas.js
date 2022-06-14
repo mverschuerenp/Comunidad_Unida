@@ -4,7 +4,7 @@ const Reservas = require('../controladores/Contr_reservas');
 
 router.get('/', async (req,res) => {
     let reservas = await new Reservas().getReservas();
-    return res.render('pagina',{reservas});
+    return res.render('test',{reservas});
 });
 
 
