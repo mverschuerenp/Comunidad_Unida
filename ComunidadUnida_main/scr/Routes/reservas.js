@@ -14,7 +14,7 @@ router.get('/admin', async (req,res) => {
 
 router.get('/reservas', async (req,res) => {
     let reservas = await new Reservas().getReservas();
-    return res.render('admin',{reservas});
+    return res.render('reserva_usuario',{reservas});
 });
 
 module.exports = router;
