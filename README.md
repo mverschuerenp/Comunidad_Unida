@@ -1,10 +1,11 @@
-# Project Title
+# Comunidad Unida
 
-Simple overview of use/purpose.
+Proyecto Comunidad Unida Programacion Profesional 2022/1 Grupo 3
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+El cliente nos solicito una plataforma web para condominios y su administracion. En conjunto con otros 2 grupos conformamos a todos los equipos trabajando en este proyecto.
+En una reunion de division de trabajo se nos asigno el area de reservas de la pagina.
 
 ## Getting Started
 
