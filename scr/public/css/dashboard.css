@@ -1,0 +1,135 @@
+body {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 48px; /* Height of navbar */
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  float: right;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  font-size: 1rem;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+#sicon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  left: 10px;
+  top: 3px;
+  opacity: 1;
+ transition: opacity .25s ease-in-out;
+ -moz-transition: opacity .25s ease-in-out;
+ -webkit-transition: opacity .25s ease-in-out;
+}
+
+label.s1 span {
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  color: #fff;
+}
+
+textarea{  
+  box-sizing: content-box;
+  overflow: hidden;
+
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  margin: auto;
+  border-radius: 6px;
+  border: 1;
+  border-color:rgb(0, 0, 0);
+}
+
+input[type="text"].text_input {
+  color: rgb(0, 0, 0);
+  border: none;
+  background-color: #fff;
+  font-size: 22px;
+  text-align: left;
+  text-indent: 5px;
+}
+
+.search-submit {
+position: absolute !important;
+height: 1px; width: 1px; 
+overflow: hidden;
+clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*
+ * Utilities
+ */
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }

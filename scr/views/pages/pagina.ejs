@@ -1,0 +1,98 @@
+<%- include('../templates/head.ejs', {titleWeb: 'Comunidad Unida' }) %>
+  <header>
+    <%- include('../templates/navbar.ejs', {brandText: 'Comunidad Unida' }) %>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <%- include("../templates/sidebar.ejs",{array: [{ "text" : "Admin" , "href" :"/admin" }, {"text": "Reservas"
+        , "href" : "/" }]}) %>
+        <main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 mt-5">
+          <div class="container">
+            <h2>
+              <p class="fw-bolder"> Reservas Comunidad Unida
+              <p class="fw-bolder">
+              <p class="fw-bolder"> 1 de junio
+              <h2>
+                <div class="row">
+                  <h2>
+                    <p class="fw-bolder"> Horas para Gimnasio
+                    <p class="fw-bolder">
+                    <h2>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                      <div class="card-body">
+                        <h4 class="card-title">Reserva de Gimnasio</h4>
+                        <h6 class="card-text">12:00-13:00<h6>
+                            <a href="#" class="btn btn-primary">Reservar</a>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                      <div class="card-body">
+                        <h4 class="card-title">Reserva de Gimnasio</h4>
+                        <h6 class="card-text">9:00-10:00</h6>
+                        <a href="#" class="btn btn-primary">Reservar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+          <div class="container">
+            <div class="row">
+              <h2>
+                <p class="fw-bolder"> Horas para Piscina
+                <p class="fw-bolder">
+                <h2>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h4 class="card-title">Reserva de Piscina</h4>
+                    <h6 class="card-text">9:00-10:00<h6>
+                        <a href="#" class="btn btn-primary">Reservar</a>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="col-sm-6">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h4 class="card-title">Reserva de Piscina</h4>
+                    <h6 class="card-text">10:30-11:30</h6>
+                    <a href="#" class="btn btn-primary">Reservar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h4 class="card-title">Reserva de Piscina</h4>
+                    <h6 class="card-text">12:00-13:00</h6>
+                    <a href="#" class="btn btn-primary">Reservar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h4 class="card-title">Reserva de Piscina</h4>
+                    <h6 class="card-text">13:30-14:30</h6>
+                    <a href="#" class="btn btn-primary">Reservar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </main>
+    </div>
+  </div>
+  <% include('../templates/footer.ejs', {titleWeb: 'Common Expenses' }) %>
