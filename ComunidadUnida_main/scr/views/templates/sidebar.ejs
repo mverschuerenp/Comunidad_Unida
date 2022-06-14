@@ -1,0 +1,11 @@
+<nav class="col-lg-2 d-none d-lg-block bg-light sidebar fixed-top">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column mb-2 mt-5">
+      <% array.forEach(element => { %>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href=<%=element.href%>><%=element.text %></a>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</nav>
