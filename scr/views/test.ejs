@@ -1,15 +1,15 @@
-<%- include('templates/head.ejs', {titleWeb: 'Common Expenses'}) %>
-<header>
-    <%- include("templates/navbar.ejs", {brandText: 'Common Expenses'}) %>
-</header>
-<div class="container-fluid">
-    <div class="row">
-        <%- include("templates/sidebar.ejs",{array: [{ "text": "Admin", "href": "/admin"},
-        {"text": "Reservas", "href": "/reservas"}]}) %>
-        <main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 mt-5">
-            <h2>Reservas Comunidad Unida</h2>
+<%- include('templates/head.ejs', {titleWeb: 'Common Expenses' }) %>
+    <header>
+        <%- include("templates/navbar.ejs", {brandText: 'Common Expenses' }) %>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <%- include("templates/sidebar.ejs",{array: [{ "text" : "Admin" , "href" : "/admin" }, {"text": "Reservas"
+                , "href" : "/reservas" }]}) %>
+                <main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 mt-5">
+                    <h2>Landing page Comunidad Unida</h2>
 
-        </main>
+                </main>
+        </div>
     </div>
-</div>
-<%- include('templates/footer.ejs', {titleWeb: 'Common Expenses'}) %>
+    <%- include('templates/footer.ejs', {titleWeb: 'Common Expenses' }) %>
