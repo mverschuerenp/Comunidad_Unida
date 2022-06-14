@@ -10,7 +10,7 @@ En una reunion de division de trabajo se nos asigno el area de reservas de la pa
 ### Instalacion
 
 Requisito de instalacion:
-* 
+* Node.js
 
 ### Ejecutar el programa
 
