@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./scr/Index.js"
+    "dev": "nodemon ./ComunidadUnida_main/scr/Index.js"
   },
   "author": "Martin",
   "license": "ISC",
