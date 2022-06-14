@@ -21,6 +21,9 @@ added:
 Orden general,
 agregar hipervinculos href para admin y reservas. Implementacion de templates coordinados con los otros grupos
 
+Changed:
+- reservas.ejs
+
 added:
 - Templates; footer.ejs, head.ejs, navbar.ejs, sidebar.ejs
 - admin.ejs 
