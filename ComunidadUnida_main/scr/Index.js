@@ -5,9 +5,9 @@ const app = express();
 const reservasRoutes = require('./Routes/reservas.js');
 
 app.set("view engine","ejs");
-app.set("views",__dirname+"\134public");
+app.set("views",__dirname+"\134views");
 
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(__dirname + '/public'));
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
