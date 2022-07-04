@@ -1,0 +1,76 @@
+<%- include('../templates/head.ejs', {titleWeb: 'Comunidad Unida' }) %>
+    <header>
+        <%- include("../templates/navbar.ejs", {brandText: 'Comunidad Unida' }) %>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <%- include("../templates/sidebar.ejs",{array: [{ "text" : "Admin" , "href" : "/admin" },
+                {"text": "Reservas" , "href" : "/reservas" }]}) %>
+                <main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 mt-5">
+                    <!DOCTYPE html>
+                    <html>
+
+                    <head>
+                        <meta charset="utf-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <title>Reservation Form</title>
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <link rel="stylesheet" href="main.css">
+                    </head>
+
+                    <body>
+
+                        <section class="banner">
+                            <h2>Reservar de Gimnasio
+                            </h2>
+                            <br>
+                            <h4>Usuario: Cristian Court</h4>
+
+                            <br>
+                            <div class="card-content">
+                                <form>
+                                    <div class="form-row">
+                                        <select name="days">
+                                            <option value="day-select">Selecciona el dia</option>
+                                            <option value="Lunes">Lunes</option>
+                                            <option value="Martes">Martes</option>
+                                            <option value="Miercoles">Miercoles</option>
+                                            <option value="Jueves">Jueves</option>
+                                            <option value="Viernes">Viernes</option>
+                                            <option value="Sabado">Sabado</option>
+                                            <option value="Domingo">Domingo</option>
+                                        </select>
+
+                                        <select name="hours">
+                                            <option value="hour-select">Selecciona la Hora</option>
+                                            <option value="10">10: 00</option>
+                                            <option value="10">11: 00</option>
+                                            <option value="10">12: 00</option>
+                                            <option value="10">13: 00</option>
+                                            <option value="10">14: 00</option>
+                                            <option value="10">15: 00</option>
+                                            <option value="10">16: 00</option>
+                                            <option value="10">17: 00</option>
+                                            <option value="10">18: 00</option>
+                                            <option value="10">19: 00</option>
+                                            <option value="10">20: 00</option>
+                                            <option value="10">21: 00</option>
+                                            <option value="10">22: 00</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+
+                                        <input type="submit" value="Reservar">
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+
+                    </body>
+
+                    </html>
+
+                </main>
+        </div>
+    </div>
+    <%- include('../templates/footer.ejs', {titleWeb: 'Comunidad Unida' }) %>
