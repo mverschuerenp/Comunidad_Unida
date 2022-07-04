@@ -8,6 +8,11 @@ class Reservas {
     return results.rows;
   }
 
+  async postReservas() {
+    await db.query().catch(console.log);
+    return;
+  }
+
 }
 
 module.exports = Reservas;

@@ -2,6 +2,26 @@
     <header>
         <%- include("../templates/navbar.ejs", {brandText: 'Comunidad Unida' }) %>
     </header>
+    <script>
+        function validateForm() {
+            var x = document.forms["reservar"]["dia"].value;
+            var y = document.forms["reservar"]["hora"].value;
+            var z = document.forms["reservar"]["departamento"].value;
+            if (z == "") {
+                alert("Por favor ingrese el numero de su departamento");
+                return false;
+            }
+            if (x == "" || x == null) {
+                alert("Por favor seleccione un dia.");
+                return false;
+            }
+
+            if (y == "" || y == null) {
+                alert("Por favor seleccione una hora.");
+                return false;
+            }
+        }
+    </script>
     <div class="container-fluid">
         <div class="row">
             <%- include("../templates/sidebar.ejs",{array: [{ "text" : "Admin" , "href" : "/admin" },
@@ -21,56 +41,63 @@
                     <body>
 
                         <section class="banner">
-                            <h2>Reservar de Gimnasio
-                            </h2>
+                            <h1>Reservar de Gimnasio
+                            </h1>
                             <br>
                             <h4>Usuario: Cristian Court</h4>
 
                             <br>
-                            <div class="card-content">
-                                <form>
-                                    <div class="form-row">
-                                        <select name="days">
-                                            <option value="day-select">Selecciona el dia</option>
-                                            <option value="Lunes">Lunes</option>
-                                            <option value="Martes">Martes</option>
-                                            <option value="Miercoles">Miercoles</option>
-                                            <option value="Jueves">Jueves</option>
-                                            <option value="Viernes">Viernes</option>
-                                            <option value="Sabado">Sabado</option>
-                                            <option value="Domingo">Domingo</option>
-                                        </select>
-
-                                        <select name="hours">
-                                            <option value="hour-select">Selecciona la Hora</option>
-                                            <option value="10">10: 00</option>
-                                            <option value="10">11: 00</option>
-                                            <option value="10">12: 00</option>
-                                            <option value="10">13: 00</option>
-                                            <option value="10">14: 00</option>
-                                            <option value="10">15: 00</option>
-                                            <option value="10">16: 00</option>
-                                            <option value="10">17: 00</option>
-                                            <option value="10">18: 00</option>
-                                            <option value="10">19: 00</option>
-                                            <option value="10">20: 00</option>
-                                            <option value="10">21: 00</option>
-                                            <option value="10">22: 00</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-row">
-
-                                        <input type="submit" value="Reservar">
-                                    </div>
+                            <div>
+                                <form name="reservar" onsubmit="return validateForm()">
+                                    <div class="form-group">
+                                        <div class="col-md-3 mb-3">
+                                            <label for="departamento">Departamento:</label>
+                                            <input type="text" class="form-control" id="departamento"
+                                                name="departamento">
+                                            <label for="dia">Dia de la semana:</label>
+                                            <select class="custom-select" name="dia" id="dia">
+                                                <option value="">Selecciona el dia</option>
+                                                <option value="Lunes">Lunes</option>
+                                                <option value="Martes">Martes</option>
+                                                <option value="Miercoles">Miercoles</option>
+                                                <option value="Jueves">Jueves</option>
+                                                <option value="Viernes">Viernes</option>
+                                                <option value="Sabado">Sabado</option>
+                                                <option value="Domingo">Domingo</option>
+                                            </select>
+                                            <label for="hora">Hora del dia:</label>
+                                            <select class="custom-select" name="hora" id="hora">
+                                                <option value="">Selecciona la Hora</option>
+                                                <option value="8:00">8:00</option>
+                                                <option value="9:00">9:00</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="18:00">18:00</option>
+                                                <option value="19:00">19:00</option>
+                                                <option value="20:00">20:00</option>
+                                                <option value="21:00">21:00</option>
+                                                <option value="22:00">22:00</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-row form-submit">
+                                            <input type="submit" class="btn btn-primary">
+                                        </div>
                                 </form>
                             </div>
-                        </section>
-
-                    </body>
-
-                    </html>
-
-                </main>
         </div>
+        </section>
+
+        </body>
+
+        </html>
+
+        </main>
+    </div>
     </div>
     <%- include('../templates/footer.ejs', {titleWeb: 'Comunidad Unida' }) %>
