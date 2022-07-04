@@ -1,66 +1,84 @@
-<%- include('templates/head.ejs', {titleWeb: 'Common Expenses'}) %>
-<header>
-    <%- include("templates/navbar.ejs", {brandText: 'Common Expenses'}) %>
-</header>
-<div class="container-fluid">
-    <div class="row">
-        <%- include("templates/sidebar.ejs",{array: [{ "text": "Admin", "href": "/admin"},
-        {"text": "Reservas", "href": "/reservas"}]}) %>
-        <main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 mt-5">
-            <!DOCTYPE html>
-            <html>
-                <head>
-                    <meta charset="utf-8">
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                    <title>Reservation Form</title>
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <link rel="stylesheet" href="main.css">
-                </head>
-                <body>
-                    
-                    <section class = "banner">
-                        <h2>Reservar de Quincho</h2>
-                        <br>
-                        <div class = "card-container">
-                            <div class = "card-img">
-                                <!-- image here -->
+<%- include('templates/head.ejs', {titleWeb: 'Comunidad Unida' }) %>
+    <header>
+        <%- include("templates/navbar.ejs", {brandText: 'Comunidad Unida' }) %>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <%- include("templates/sidebar.ejs",{array: [{ "text" : "Admin" , "href" : "/admin" }, {"text": "Reservas"
+                , "href" : "/reservas" }]}) %>
+                <main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 mt-5">
+                    <!DOCTYPE html>
+                    <html>
+
+                    <head>
+                        <meta charset="utf-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <title>Reservation Form</title>
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <link rel="stylesheet" href="main.css">
+                    </head>
+
+                    <body>
+
+                        <section class="banner">
+                            <h2>Reservar de Gimnasio
+                            </h2>
+                            <br>
+                            <h4>Usuario: Cristian Court</h4>
+
+                            <br>
+                            <div class="card-container">
+                                <div class="card-img">
+                                    <!-- image here -->
+                                </div>
+
+                                <div class="card-content">
+                                    <form>
+                                        <div class="form-row">
+                                            <select name="days">
+                                                <option value="day-select">Selecciona el dia</option>
+                                                <option value="sunday">Martes 14 de Junio</option>
+                                                <option value="monday">Miercoles 15 de Junio</option>
+                                                <option value="tuesday">Jueves 16 de Junio</option>
+                                                <option value="wednesday">Viernes 17 de Junio</option>
+                                                <option value="thursday">Sabado 18 de Junio</option>
+                                                <option value="friday">Domingo 19 de Junio</option>
+                                                <option value="saturday">Lunes 20 de Junio</option>
+                                            </select>
+
+                                            <select name="hours">
+                                                <option value="hour-select">Selecciona la Hora</option>
+                                                <option value="10">10: 00</option>
+                                                <option value="10">11: 00</option>
+                                                <option value="10">12: 00</option>
+                                                <option value="10">13: 00</option>
+                                                <option value="10">14: 00</option>
+                                                <option value="10">15: 00</option>
+                                                <option value="10">16: 00</option>
+                                                <option value="10">17: 00</option>
+                                                <option value="10">18: 00</option>
+                                                <option value="10">19: 00</option>
+                                                <option value="10">20: 00</option>
+                                                <option value="10">21: 00</option>
+                                                <option value="10">22: 00</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="form-row">
+
+                                            <input type="submit" value="Reservar">
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-            
-                            <div class = "card-content">
-                                <form>
-                                    <div class = "form-row">
-                                        <select name = "days">
-                                            <option value = "day-select">Selecciona el dia</option>
-                                            <option value = "sunday">Martes 14 de Junio</option>
-                                            <option value = "monday">Martes 15 de Junio</option>
-                                            <option value = "tuesday">Martes 16 de Junio</option>
-                                            <option value = "wednesday">Martes 17 de Junio</option>
-                                            <option value = "thursday">Martes 18 de Junio</option>
-                                            <option value = "friday">Martes 19 de Junio</option>
-                                            <option value = "saturday">Martes 20 de Junio</option>
-                                        </select>
-            
-                                        <select name = "hours">
-                                            <option value = "hour-select">Selecciona la Hora</option>
-                                            <option value = "10">12:00 - 17:00</option>
-                                            <option value = "10">18:00 - 22:00</option>
-                                        </select>
-                                    </div>
+                        </section>
 
-            
-                                    <div class = "form-row">
+                    </body>
 
-                                        <input type = "submit" value = "Reservar">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </section>
-                    
-                </body>
-            </html>
+                    </html>
 
-        </main>
+                </main>
+        </div>
     </div>
-</div>
-<%- include('templates/footer.ejs', {titleWeb: 'Common Expenses'}) %>
+    <%- include('templates/footer.ejs', {titleWeb: 'Comunidad Unida' }) %>
