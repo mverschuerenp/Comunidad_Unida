@@ -41,22 +41,32 @@
                     <body>
 
                         <section class="banner">
-                            <h1>Reservar de Gimnasio
+                            <h1>Reservas
                             </h1>
-                            <br>
-                            <h4>Usuario: Cristian Court</h4>
-
                             <br>
                             <div>
                                 <form name="reservar" onsubmit="return validateForm()">
                                     <div class="form-group">
                                         <div class="col-md-3 mb-3">
+                                            <label for="nombre">Nombre asociado a la reserva:</label>
+                                            <input type="text" class="form-control" id="nombre" name="nombre">
+
                                             <label for="departamento">Departamento:</label>
                                             <input type="text" class="form-control" id="departamento"
                                                 name="departamento">
+
+                                            <label for="espacio">Espacio común:</label>
+                                            <select class="custom-select" name="espacio" id="espacio">
+                                                <option value="">Seleccione el espacio</option>
+                                                <option value="Gimnacio">Gimnacio</option>
+                                                <option value="Quincho">Quincho</option>
+                                                <option value="Sala de eventos">Sala de eventos</option>
+                                                <option value="Cancha de tenis">Cancha de tenis</option>
+                                            </select>
+
                                             <label for="dia">Dia de la semana:</label>
                                             <select class="custom-select" name="dia" id="dia">
-                                                <option value="">Selecciona el dia</option>
+                                                <option value="">Seleccione el dia</option>
                                                 <option value="Lunes">Lunes</option>
                                                 <option value="Martes">Martes</option>
                                                 <option value="Miercoles">Miercoles</option>
@@ -65,9 +75,10 @@
                                                 <option value="Sabado">Sabado</option>
                                                 <option value="Domingo">Domingo</option>
                                             </select>
+
                                             <label for="hora">Hora del dia:</label>
                                             <select class="custom-select" name="hora" id="hora">
-                                                <option value="">Selecciona la Hora</option>
+                                                <option value="">Seleccione la hora</option>
                                                 <option value="8:00">8:00</option>
                                                 <option value="9:00">9:00</option>
                                                 <option value="10:00">10:00</option>
@@ -84,8 +95,16 @@
                                                 <option value="21:00">21:00</option>
                                                 <option value="22:00">22:00</option>
                                             </select>
+
+                                            <label for="nhoras">¿Cuantas horas desea reservar el espacio?:</label>
+                                            <select class="custom-select" name="nhoras" id="nhoras">
+                                                <option value="">Seleccione la cantidad de horas</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
                                         </div>
-                                        <div class="form-row form-submit">
+                                        <div class="form-row form-submit col-md-5">
                                             <input type="submit" class="btn btn-primary">
                                         </div>
                                 </form>
