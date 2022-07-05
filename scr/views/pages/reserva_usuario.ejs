@@ -59,17 +59,17 @@
                             </h1>
                             <br>
                             <div>
-                                <form name="reservar" onsubmit="return validateForm()">
+                                <form action="guardar.php" method="POST">
                                     <div class="form-group">
                                         <div class="col-md-3 mb-3">
                                             <label for="nombre">Nombre asociado a la reserva:</label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre">
+                                            <input type="text" name="nombre" placeholder="Nombre" requiered>
 
                                             <label for="depto">Departamento:</label>
-                                            <input type="text" class="form-control" id="depto" name="depto">
+                                            <input type="int" name="depto" placeholder="Departamento" requiered>
 
-                                            <label for="espacio">Espacio común:</label>
-                                            <select class="custom-select" name="espacio" id="espacio">
+                                            <label for="espaciocomun">Espacio común:</label>
+                                            <select class="custom-select" type="text" name="espaciocomun">
                                                 <option value="">Seleccione el espacio</option>
                                                 <option value="Gimnasio">Gimnasio</option>
                                                 <option value="Quincho">Quincho</option>
@@ -77,8 +77,8 @@
                                                 <option value="Cancha de tenis">Cancha de tenis</option>
                                             </select>
 
-                                            <label for="dia">Dia de la semana:</label>
-                                            <select class="custom-select" name="dia" id="dia">
+                                            <label for="diasemana">Dia de la semana:</label>
+                                            <select class="custom-select" name="diasemana" type="text">
                                                 <option value="">Seleccione el dia</option>
                                                 <option value="Lunes">Lunes</option>
                                                 <option value="Martes">Martes</option>
@@ -90,7 +90,7 @@
                                             </select>
 
                                             <label for="hora">Hora del dia:</label>
-                                            <select class="custom-select" name="hora" id="hora">
+                                            <select class="custom-select" name="hora" type="text">
                                                 <option value="">Seleccione la hora</option>
                                                 <option value="8:00">8:00</option>
                                                 <option value="9:00">9:00</option>
@@ -109,8 +109,8 @@
                                                 <option value="22:00">22:00</option>
                                             </select>
 
-                                            <label for="nhoras">¿Cuantas horas desea reservar el espacio?:</label>
-                                            <select class="custom-select" name="nhoras" id="nhoras">
+                                            <label for="cuantashoras">¿Cuantas horas desea reservar el espacio?:</label>
+                                            <select class="custom-select" name="cuantashoras" type="int">
                                                 <option value="">Seleccione la cantidad de horas</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
