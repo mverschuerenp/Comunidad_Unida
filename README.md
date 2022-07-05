@@ -19,6 +19,11 @@ Requisito de instalación:
 npm run dev
 ```
 
+### Archivos
+* node_modules: Contiene los archivos necesarios para ejecutar Node.
+* scr: Contiene las carpetas y los archivos con la conexión con la base de datos (config, bbdd.js), controlador de la base de datos con los GET y POST necesarios (controladores, Contr_reservas.js), css y archivos que ayudan con la estética de la página (public), hipervínculos y redirecciones (Routes, reservas,js), los diferentes perfiles de la página y templates compartidos entre los grupos (views)
+* Index.js
+
 ## Autores
 
 * Cristian Veliz
