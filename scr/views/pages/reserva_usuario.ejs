@@ -4,20 +4,34 @@
     </header>
     <script>
         function validateForm() {
-            var x = document.forms["reservar"]["dia"].value;
-            var y = document.forms["reservar"]["hora"].value;
-            var z = document.forms["reservar"]["departamento"].value;
-            if (z == "") {
+            var nombre = document.forms["reservar"]["nombre"].value;
+            var depto = document.forms["reservar"]["depto"].value;
+            var espacio = document.forms["reservar"]["espacio"].value;
+            var dia = document.forms["reservar"]["dia"].value;
+            var hora = document.forms["reservar"]["hora"].value;
+            var nhoras = document.forms["reservar"]["nhoras"].value;
+            if (nombre == "") {
+                alert("Por favor ingrese su nombre.");
+                return false;
+            }
+            if (depto == "") {
                 alert("Por favor ingrese el numero de su departamento");
                 return false;
             }
-            if (x == "" || x == null) {
+            if (espacio == "") {
+                alert("Por favor seleccione un espacio para reservar.");
+                return false;
+            }
+            if (dia == "") {
                 alert("Por favor seleccione un dia.");
                 return false;
             }
-
-            if (y == "" || y == null) {
+            if (hora == "") {
                 alert("Por favor seleccione una hora.");
+                return false;
+            }
+            if (nhoras == "") {
+                alert("Por favor seleccione la cantidad de horas que quiera reservar.");
                 return false;
             }
         }
@@ -51,14 +65,13 @@
                                             <label for="nombre">Nombre asociado a la reserva:</label>
                                             <input type="text" class="form-control" id="nombre" name="nombre">
 
-                                            <label for="departamento">Departamento:</label>
-                                            <input type="text" class="form-control" id="departamento"
-                                                name="departamento">
+                                            <label for="depto">Departamento:</label>
+                                            <input type="text" class="form-control" id="depto" name="depto">
 
                                             <label for="espacio">Espacio común:</label>
                                             <select class="custom-select" name="espacio" id="espacio">
                                                 <option value="">Seleccione el espacio</option>
-                                                <option value="Gimnacio">Gimnacio</option>
+                                                <option value="Gimnasio">Gimnasio</option>
                                                 <option value="Quincho">Quincho</option>
                                                 <option value="Sala de eventos">Sala de eventos</option>
                                                 <option value="Cancha de tenis">Cancha de tenis</option>
