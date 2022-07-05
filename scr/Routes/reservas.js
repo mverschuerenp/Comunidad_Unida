@@ -198,11 +198,12 @@ router.get('/admin', async (req, res) => {
     let reservas = await new Reservas().getReservas();
     return res.render('admin', { reservas });
 });
-router.delete('/admin/:reservasRut', async (req, res) => {
-    let { reservasRut } = req.params;
-    await new Reservas().deleteReserva(reservasRut);
+router.delete('/admin/:reservaRut/:reservaLugar', async (req, res) => {
+    let { reservaRut } = req.params.reservaRut;
+    let { reservaLugar } = req.params.reservaLugar;
+    await new Reservas().deleteReserva(reservaRut, reservaLugar);
     let reservas = await new Reservas().getReservas();
-    return res.render('/admin', { reservas });
+    return res.render('admin', { reservas });
 });
 
 router.get('/reservas', async (req, res) => {

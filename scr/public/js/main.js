@@ -1,8 +1,7 @@
-function deleteReserva(reservaRut) {
-    //contact server
+function deleteReserva(reservaRut, reservaLugar) {
     return $.ajax({
         method: "delete",
-        url: `/admin/${reservaRut}`,
+        url: `/admin/${reservaRut}/${reservaLugar}`,
         contentType: "application/json",
         cache: false,
         success: () => {
@@ -14,11 +13,11 @@ function deleteReserva(reservaRut) {
     });
 }
 
-function validateDelete(reservaRut) {
+function validateDelete(reservaRut, reservaLugar) {
     console.log(reservaRut);
     var res = confirm("¿Seguro que quieres borrar la reserva?");
     if (res) {
-        deleteReserva(reservaRut);
+        deleteReserva(reservaRut, reservaLugar);
         return true;
     }
     else {
