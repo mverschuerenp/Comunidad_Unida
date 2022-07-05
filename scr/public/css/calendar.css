@@ -62,3 +62,9 @@ table.table-borderless>tbody>tr>td {
 .table tbody tr.hover th {
     background-color: whiteSmoke;
 }
+
+.delete-todo-form-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}

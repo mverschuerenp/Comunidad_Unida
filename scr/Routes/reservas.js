@@ -198,13 +198,20 @@ router.get('/admin', async (req, res) => {
     let reservas = await new Reservas().getReservas();
     return res.render('admin', { reservas });
 });
+router.delete('/admin/:reservasRut', async (req, res) => {
+    let { reservasRut } = req.params;
+    await new Reservas().deleteReserva(reservasRut);
+    let reservas = await new Reservas().getReservas();
+    return res.render('/admin', { reservas });
+});
 
 router.get('/reservas', async (req, res) => {
     return res.render('reserva_usuario');
 });
 router.post('/reservas', async (req, res) => {
-    let hora = horario(req.body.hora, req.body.nhoras);
-    console.log(hora);
+    var hora = horario(req.body.hora, req.body.nhoras);
+    var reserva = { lugar: req.body.espacio, horas: hora, nombre: req.body.nombre, rut: req.body.rut, dia: req.body.dia };
+    await new Reservas().postReservas(reserva, res);
     return res.render('reserva_usuario');
 });
 

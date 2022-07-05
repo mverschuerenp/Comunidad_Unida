@@ -1,16 +1,34 @@
-<div class="list-group">
+<ul class="list-group">
   <% for(let i=0; i < reservas.length; i++) { %>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <li class="list-group-item flex-column align-items-start">
       <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1"><%= reservas[i].place %></h5>
+        <h5 class="mb-1">
+          <%= reservas[i].place %>
+        </h5>
         <small></small>
-        <p class="mb-1"><%=reservas[i].name %></p>
+        <h5 class="mb-1">
+          <%=reservas[i].name %>
+        </h5>
         <small></small>
-        <p class="mb-1"><%=reservas[i].rut %></p>
+        <h5 class="mb-1">
+          <%=reservas[i].rut %>
+        </h5>
         <small></small>
-        <p class="mb-1"><%=reservas[i].rank_of_time %></p>
-
+        <h5 class="mb-1">
+          <%=reservas[i].day %>
+        </h5>
+        <small></small>
+        <h5 class="mb-1">
+          <%=reservas[i].rank_of_time %>
+        </h5>
+        <div class="list-group-item-actions">
+          <button class="delete-todo-form-btn" onclick="validateDelete(<%= reservas[i].rut %>)">
+            <span class="material-icons">
+              delete
+            </span>
+          </button>
+        </div>
       </div>
-    </a>
-  <% } %>
-</div>
+    </li>
+    <% } %>
+</ul>
