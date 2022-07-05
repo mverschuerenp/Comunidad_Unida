@@ -7,6 +7,22 @@ class Reservas {
     let results = await db.query('SELECT * FROM bookings').catch(console.log);
     return results.rows;
   }
+  async getReservasQuincho() {
+    let results = await db.query(`SELECT * FROM bookings WHERE place='Quincho'`).catch(console.log);
+    return results.rows;
+  }
+  // async getReservasSalaeventos() {
+  //   let results = await db.query('SELECT * FROM bookings where place = "Sala de eventos"').catch(console.log);
+  //   return results.rows;
+  // }
+  // async getReservasTenis() {
+  //   let results = await db.query('SELECT * FROM bookings where place = "Cancha de Tenis"').catch(console.log);
+  //   return results.rows;
+  // }
+  // async getReservasGimnasio() {
+  //   let results = await db.query('SELECT * FROM bookings where place = "Gimnasio"').catch(console.log);
+  //   return results.rows;
+  // }
 
   async postReservas(reserva) {
     await db

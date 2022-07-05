@@ -198,6 +198,20 @@ router.get('/admin', async (req, res) => {
     let reservas = await new Reservas().getReservas();
     return res.render('admin', { reservas });
 });
+router.get('/admin/quincho', async (req, res) => {
+    let reservas = await new Reservas().getReservasQuincho();
+    return res.render('quincho', { reservas });
+});
+router.get('/admin/gimnasio', async (req, res) => {
+    let reservas = await new Reservas().getReservasGimnasio();
+    return res.render('quincho', { reservas });
+});
+router.get('/admin/salaeventos', async (req, res) => {
+    return res.render('salaeventos');
+});
+router.get('/admin/canchatenis', async (req, res) => {
+    return res.render('canchatenis');
+});
 router.delete('/admin/:reservaRut/:reservaLugar', async (req, res) => {
     let { reservaRut } = req.params.reservaRut;
     let { reservaLugar } = req.params.reservaLugar;

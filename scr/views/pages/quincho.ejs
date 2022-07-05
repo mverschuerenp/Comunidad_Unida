@@ -1,0 +1,16 @@
+<%- include('../templates/head.ejs', {titleWeb: 'Comunidad Unida' }) %>
+    <header>
+        <%- include("../templates/navbar.ejs", {brandText: 'Comunidad Unida' }) %>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <%- include("../templates/sidebar.ejs",{array: [{ "text" : "Admin" , "href" : "/admin" },
+                {"text": "Reservas" , "href" : "/reservas" }]}) %>
+                <main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 mt-5">
+                    <h2>Quincho</h2>
+                    <%- include('./lista_reservas.ejs') %>
+
+                </main>
+        </div>
+    </div>
+    <%- include('../templates/footer.ejs', {titleWeb: 'Comunidad Unida' }) %>
