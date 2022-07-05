@@ -11,18 +11,18 @@ class Reservas {
     let results = await db.query(`SELECT * FROM bookings WHERE place='Quincho'`).catch(console.log);
     return results.rows;
   }
-  // async getReservasSalaeventos() {
-  //   let results = await db.query('SELECT * FROM bookings where place = "Sala de eventos"').catch(console.log);
-  //   return results.rows;
-  // }
-  // async getReservasTenis() {
-  //   let results = await db.query('SELECT * FROM bookings where place = "Cancha de Tenis"').catch(console.log);
-  //   return results.rows;
-  // }
-  // async getReservasGimnasio() {
-  //   let results = await db.query('SELECT * FROM bookings where place = "Gimnasio"').catch(console.log);
-  //   return results.rows;
-  // }
+  async getReservasSalaeventos() {
+    let results = await db.query(`SELECT * FROM bookings WHERE place='Sala_de_eventos'`).catch(console.log);
+    return results.rows;
+  }
+  async getReservasTenis() {
+    let results = await db.query(`SELECT * FROM bookings WHERE place='Cancha de tenis'`).catch(console.log);
+    return results.rows;
+  }
+  async getReservasGimnasio() {
+    let results = await db.query(`SELECT * FROM bookings WHERE place='Gimnasio'`).catch(console.log);
+    return results.rows;
+  }
 
   async postReservas(reserva) {
     await db
