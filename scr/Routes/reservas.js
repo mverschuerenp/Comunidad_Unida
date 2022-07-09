@@ -212,10 +212,9 @@ router.get('/admin/salaeventos', async (req, res) => {
 router.get('/admin/canchatenis', async (req, res) => {
     return res.render('canchatenis');
 });
-router.delete('/admin/:reservaRut/:reservaLugar', async (req, res) => {
-    let { reservaRut } = req.params.reservaRut;
-    let { reservaLugar } = req.params.reservaLugar;
-    await new Reservas().deleteReserva(reservaRut, reservaLugar);
+router.delete('/admin/:reservaRut/', async (req, res) => {
+    let { reservaRut } = req.params;
+    await new Reservas().deleteReserva(reservaRut);
     let reservas = await new Reservas().getReservas();
     return res.render('admin', { reservas });
 });
