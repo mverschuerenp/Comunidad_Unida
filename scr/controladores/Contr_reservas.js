@@ -30,8 +30,8 @@ class Reservas {
       .catch(console.log);
     return;
   }
-  async deleteReserva(reservasRut, reservaLugar) {
-    await db.query(`DELETE FROM bookings WHERE rut=$1 AND place=$2 `, [reservasRut, reservaLugar]).catch(console.log);
+  async deleteReserva(reservasRut) {
+    await db.query(`DELETE FROM bookings WHERE rut=$1 `, [reservasRut]).catch(console.log);
     return;
   }
 }
